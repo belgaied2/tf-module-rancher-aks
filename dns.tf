@@ -20,7 +20,7 @@ data "kubernetes_service" "nginx_host" {
 }
 
 resource "azurerm_dns_a_record" "rancher_aks" {
-  name                = "rancher"
+  name                = var.dns_rancher_ui_name
   zone_name           = var.dns_zone_name
   resource_group_name = var.dns_resource_group_name
   ttl                 = 300

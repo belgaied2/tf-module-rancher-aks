@@ -1,15 +1,19 @@
 ## AZURE VARIABLES
-# Variable for Resource Group Location
-variable "azure_location" {
+variable "azure_region" {
   type = string
-  description = "Location to be used for the Resource Group"
+  description = "Region to be used for the Resource Group"
   default = "Germany West Central"
 }
 
-# Variables related to DNS A Record creation
+# AZURE Hosted zone for Rancher
 variable "dns_zone_name" {
   type = string
   description = "DNS Zone to host Rancher in"
+}
+
+variable "dns_rancher_ui_name"{
+  type = string
+  description = "DNS A record for the Rancher UI"
 }
 
 variable "dns_resource_group_name" {
@@ -18,7 +22,7 @@ variable "dns_resource_group_name" {
   
 }
 
-# Variables for AKS
+# Prefix Name for the AKS Cluster
 variable "aks_name_prefix" {
   type = string
   description = "Prefix to use for the cluster name"
@@ -28,15 +32,15 @@ variable "aks_name_prefix" {
 variable "aks_kubernetes_version" {
   type = string
   description = "Version of Rancher Management Cluster's Kubernetes"
-  default = "1.20.5"
+  default = "1.20.9"
 }
 
 ## RANCHER VARIABLES
-# Variables for Rancher's Helm Release
+# Rancher version to be deployed
 variable "rancher_version" {
   type = string
   description = "Version of Rancher Server to install"
-  default = "v2.5.7"
+  default = "v2.6.3"
 }
 
 variable "rancher_chart_options" {
@@ -52,7 +56,7 @@ variable "rancher_chart_options" {
 variable "nginx_ingress_version" {
   type = string
   description = "Version of NGINX Ingress Controller"
-  default = "3.29.0"
+  default = "4.0.17"
 }
 
 variable "nginx_ingress_ns" {

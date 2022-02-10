@@ -1,13 +1,13 @@
 provider "azurerm" {
   # Whilst version is optional, we /strongly recommend/ using it to pin the version of the Provider being used
-  version = "=2.37.0"
+#  version = "2.95.0"
   features{}
 }
 
 module "aks" {
     source = "./azure-aks"
     
-    azure_location      = var.azure_location
+    azure_location      = var.azure_region
     aks_name_prefix     = var.aks_name_prefix
     name_prefix         = var.aks_name_prefix
     aks_cluster_version = var.aks_kubernetes_version
@@ -27,7 +27,7 @@ module "rancher_server" {
     branch = "stable"
     chart_set = var.rancher_chart_options
   }
-  rancher_hostname = "rancher.${var.dns_zone_name}"
+  rancher_hostname = "${var.dns_rancher_ui_name}.${var.dns_zone_name}"
 }
 
 
