@@ -13,7 +13,7 @@ No requirements.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_aks"></a> [aks](#module\_aks) | Azure/aks/azurerm | 4.8.0 |
-| <a name="module_network"></a> [network](#module\_network) | Azure/network/azurerm | 3.3.0 |
+| <a name="module_network"></a> [network](#module\_network) | Azure/network/azurerm | 3.5.0 |
 
 ## Resources
 

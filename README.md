@@ -1,5 +1,5 @@
 # Introduction 
-This repository is an example configuration for installing Rancher v2.5.X on AKS on Azure. 
+This repository is an example configuration for installing Rancher v2.6.X on AKS on Azure. 
 
 # What this configuration creates
 This configuration creates everything necessary for Rancher App on AKS:

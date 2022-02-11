@@ -19,4 +19,9 @@ resource "helm_release" "nginx-ingress" {
   namespace  = var.nginx_ingress_ns
   create_namespace = true
 
+  set {
+    name = "controller.service.type"
+    value = "LoadBalancer"
+  }
+
 }
