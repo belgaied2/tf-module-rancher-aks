@@ -1,0 +1,8 @@
+azure_region = "Germany West Central"         # Resource Group region defined as Location
+dns_zone_name = "rancherpscloud.com"          # DNS zone where Rancher will be deployed in
+dns_rancher_ui_name = "rancher01"             # DNS A record for the Rancher UI
+dns_resource_group_name = "rancherDNS-RG"     # Resource Group Name for the DNS Entries
+aks_name_prefix = "upstream01"                # Prefix Name for the AKS Cluster
+aks_kubernetes_version = "1.20.9"                   # AKS Kubernetes Version - Default 1.20.9 - Check Rancher Support Matrix
+rancher_version = ""                          # Rancher version to be deployed - defaults to v2.6.3
+nginx_ingress_version = "3.12.0"                    # nginx-ingress controller version - Defaults to 3.12.0
